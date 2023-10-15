@@ -5,7 +5,7 @@ function RecommendationsNames({ id }) {
   const [nurse, setNurse] = useState({});
   useEffect(() => {
     axios
-      .get("http://localhost:8000/nurse/id", {
+      .get("/nurse/id", {
         params: { id: id },
       })
       .then((response) => setNurse(response.data))

@@ -5,7 +5,7 @@ function NurseDetails({ nurseSelected }) {
   const [nurseInfo, setNurseInfo] = useState({});
   useEffect(() => {
     axios
-      .get("http://localhost:8000/nurse/id", {
+      .get("/nurse/id", {
         params: { id: nurseSelected.value },
       })
       .then((response) => setNurseInfo(response.data))

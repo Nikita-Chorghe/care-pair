@@ -13,7 +13,7 @@ function SelectPatients(props) {
   const [Patients, setPatients] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8000/patient/names")
+      .get("/patient/names")
       .then((response) => {
         var data = response.data.map((data) => ({
           label: data.fname,

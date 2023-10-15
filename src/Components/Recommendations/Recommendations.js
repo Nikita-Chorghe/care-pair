@@ -14,7 +14,7 @@ function Recommendations({
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/predict", {
+      .get("/predict", {
         params: { id: patientSelected.value },
       })
       .then((response) => setpredictions(response.data))
